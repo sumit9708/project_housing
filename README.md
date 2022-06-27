@@ -88,3 +88,7 @@ docker stop <container_id>
 python setup.py install
 
 """
+### Install ipynb kernel(To use jupyter notebook in vscode)
+"""
+pip install ipykernel
+"""
