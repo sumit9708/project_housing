@@ -9,6 +9,7 @@ AUTHOR = "Sumit Bhagat"
 DESCRIPTION = "This is the project to predict house price in bangalore"
 #PACKAGES = ['housing']
 REQUIREMENT_FILE_NAME='requirements.txt'
+HYPHEN_E_DOT="-e ."
 
 """
 Description - This function is going to return list of requirements mention in requirements.txt file.
@@ -18,7 +19,11 @@ mentioned in requiremnts.txt file.
 """
 def get_requirements_list()->List[str]:
     with open(REQUIREMENT_FILE_NAME) as requirement_file:
-        return requirement_file.readlines().remove("-e .")
+        requirement_list = [requirement.replace("\n","")  for requirement in requirement_file.readlines()]
+        if HYPHEN_E_DOT in requirement_list:
+            requirement_list.remove(HYPHEN_E_DOT)
+        return requirement_list
+
 
 setup(
 
