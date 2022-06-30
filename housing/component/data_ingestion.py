@@ -1,3 +1,4 @@
+from cProfile import label
 from cmath import e, inf
 from genericpath import exists
 from tkinter import E
@@ -81,8 +82,8 @@ class DataIngeston:
 
             housing_data_frame['income_cat'] = pd.cut(
                 housing_data_frame["median_income"],
-                bins=[0 , 1.5 , 3.0 , 4.5 , 6.0 , np.inf]
-                labels = [1 , 2 , 3 , 4 , 5]
+                bins=[0, 1.5, 3.0, 4.5, 6.0, np.inf],
+                labels = [1,2,3,4,5]
             )
 
             logging.info(f"Spliting Data into Train and Test")
