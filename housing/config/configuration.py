@@ -68,10 +68,16 @@ class Configuration:
             raise HousingException(e,sys) from e
 
     def get_data_validation_config(self)->DataValidrionConfig:
-        pass
+        try:
+            pass
+        except Exception as e:
+            raise HousingException(e,sys) from e
 
     def get_data_transformation_config(self)->DataTransformationConfig:
-        pass
+        try:
+            pass
+        except Exception as e:
+            raise HousingException(e,sys) from e
 
     def get_model_trainer_config(self)->ModelTrainerConfig:
         pass
