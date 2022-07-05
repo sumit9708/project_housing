@@ -92,3 +92,10 @@ python setup.py install
 """
 pip install ipykernel
 """
+### Data Drift: When your datset stats gets change we call it as data drift
+
+"""
+with open(self.data_validation_config.report_file_path,"w") as report_file:
+                json.dump(report,report_file,indent=6)
+
+"""
