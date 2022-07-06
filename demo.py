@@ -10,13 +10,13 @@ def main():
     try:
         #data_transformation_config = Configuration().get_data_transformation_config()
         #print(data_transformation_config)
-        #pipeline = Pipeline()
-        #pipeline.run_pipeline()
-        schema_file_path = r"D:\ML Projects\project_housing\config\schema.yaml"
-        file_path = r"D:\ML Projects\project_housing\housing\artifact\data_ingestion\2022-06-30-20-49-16\ingested_data\train\housing.csv"
-        df = DataTransformation.load_data(file_path=file_path,schema_file_path=schema_file_path)
-        print(df.columns)
-        print(df.dtypes)
+        pipeline = Pipeline()
+        pipeline.run_pipeline()
+        #schema_file_path = r"D:\ML Projects\project_housing\config\schema.yaml"
+        #file_path = r"D:\ML Projects\project_housing\housing\artifact\data_ingestion\2022-06-30-20-49-16\ingested_data\train\housing.csv"
+        #df = DataTransformation.load_data(file_path=file_path,schema_file_path=schema_file_path)
+        #print(df.columns)
+        #print(df.dtypes)
 
     except Exception as e:
         logging.error(f"{e}")
