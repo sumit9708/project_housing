@@ -8,8 +8,8 @@ from housing.component.data_transformation import DataTransformation
 
 def main():
     try:
-        #data_transformation_config = Configuration().get_data_transformation_config()
-        #print(data_transformation_config)
+        #model_trainer_config = Configuration().get_model_trainer_config()
+        #print(model_trainer_config)
         pipeline = Pipeline()
         pipeline.run_pipeline()
         #schema_file_path = r"D:\ML Projects\project_housing\config\schema.yaml"
